@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.25"/>
+  <title>Mayank | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0a0a0a;
+      color: #eee;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #222;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      color: #00ffe1;
+      font-weight: 600;
+    }
+    nav a {
+      color: #ccc;
+      margin-left: 1.2rem;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #00ffe1;
+      text-shadow: 0 0 8px #00ffe1;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    #banner {
+      height: 95vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(145deg, #0f0f0f, #1b1b1b);
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+    #banner h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: #00ffe1;
+      text-shadow: 0 0 10px #00ffe180;
+    }
+    #banner p {
+      font-size: 1.3rem;
+      color: #bbb;
+    }
+
+    #about {
+      text-align: center;
+      animation: fadeInUp 1s ease;
+    }
+    #about img {
+      width: 200px;
+      height: 200px;
+      border-radius:80px;
+      margin-bottom: 1rem;
+      border: 3px solid #00ffe1;
+      box-shadow: 0 0 15px #00ffe170;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .project {
+      background: #1a1a1a;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid #2c2c2c;
+      transition: 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px #00ffe140;
+    }
+    .project h3 {
+      color: #00ffe1;
+      margin-bottom: 0.5rem;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 2rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea {
+      background: #111;
+      border: 1px solid #333;
+      padding: 0.8rem;
+      color: #eee;
+      border-radius: 5px;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #00ffe1;
+      box-shadow: 0 0 5px #00ffe160;
+    }
+    button {
+      background: #00ffe1;
+      color: #111;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: #00ffc3;
+      box-shadow: 0 0 10px #00ffe180;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: #888;
+      border-top: 1px solid #222;
+      font-size: 0.9rem;
+    }
+    footer a{
+        color: #888;
+        font-size: 0.8rem;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 href="#footer">Mayank</h1>
+    <nav>
+      <a href="#banner">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="banner">
+    <h2>Hi, I'm Mayank 🚀</h2>
+    <p>Developer | Designer | Dreamer</p>
+  </section>
+
+  <section id="about">
+    <img src="Screenshot 2025-07-28 155932.png" alt="Profile" />
+    <h2>About Me</h2>
+    <p>I'm a tech enthusiast from NIT Raipur. I enjoy crafting sleek user experiences and solving real-world problems through code. Currently exploring Web Dev, AI, and more.</p>
+  </section>
+
+  <section id="projects">
+    <h2 style="text-align:center; color:#00ffe1;">Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>Responsive, animated portfolio with dark theme.</p>
+      </div>
+      <div class="project">
+        <h3>Weather App</h3>
+        <p>Built with API integration & geolocation in JavaScript.</p>
+      </div>
+      <div class="project">
+        <h3>Calculator</h3>
+        <p>Smart AI chatbot using HTML, CSS & JS.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 style="text-align:center; color:#00ffe1;">Contact Me</h2>
+    <form onsubmit="event.preventDefault(); alert('Message Sent!');">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Mayank | Built with ❤ in dark mode.<br>
+    <a href="https://www.github.com">Github : MAYANK-2109  |</a><a href="https://www.linkedin.com">  LinkedIn : Mayank Kumar Chandrikapure</a>
+  </footer>
+
+</body>
+</html>
